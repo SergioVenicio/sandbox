@@ -2,12 +2,12 @@ import time
 import tkinter
 
 
-class TimerAbstract:
+class TimerMixin:
     def get_time(self):
         return time.strftime('%H:%M:%S')
 
 
-class Relogio(TimerAbstract):
+class Relogio(TimerMixin):
     def __init__(self):
         self.relogio = tkinter.Label()
         self.relogio['font'] = 'Helvica 120 bold'
@@ -21,7 +21,7 @@ class Relogio(TimerAbstract):
         self.relogio.after(100, self.tictac)
 
 
-class Timer(TimerAbstract):
+class Timer(TimerMixin):
     def __init__(self, time_):
         self.timer = tkinter.Label()
         self.timer['font'] = 'Helvica 120 bold'
