@@ -5,7 +5,7 @@ class Tombola:
         self.itens = []
 
     def carregar(self, itens):
-        self.itens = itens
+        self.itens.extend(itens)
         return self.itens
 
     def carregada(self):

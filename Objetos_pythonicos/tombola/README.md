@@ -10,6 +10,7 @@ Uma tombola pode ser criada da seguinte maneira:
 Uma lista recém criada não possui elementos. Portanto o método "carregada"
 retorna falso:
 ```python
+    >>> itens = [1, 2, 3]
     >>> t.carregada()
     False
 
@@ -19,7 +20,7 @@ Após a criação os items da tômbola são representados por uma lista vazia:
 ```python
     >>> t.itens
     []
-    >>> t.carregar([1, 2, 3])
+    >>> t.carregar(itens)
     [1, 2, 3]
     
 
@@ -60,5 +61,7 @@ Uma tômbola serve para sortear elementos:
     3
     >>> t.carregada()
     False
+    >>> itens == [1, 2, 3]
+    True
 
 ```
