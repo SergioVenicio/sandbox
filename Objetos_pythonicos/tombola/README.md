@@ -3,7 +3,7 @@
 Uma tombola pode ser criada da seguinte maneira:
 
 ```python
-    >>> from tombola import tombola
+    >>> from Objetos_pythonicos.tombola import tombola
     >>> t = tombola.Tombola()
 
 ```
@@ -49,15 +49,20 @@ Uma tômbola pode misturar os seus itens:
 
 Uma tômbola serve para sortear elementos:
 ```python
-    >>> t.sortear()
+    >>> t()
     1
     >>> t.carregada()
     True
-    >>> t.sortear()
+
+```
+
+O principal método da tombola é sortear. Portanto, se invocada diretamente ela executa esse método
+```python
+    >>> t()
     2
     >>> t.carregada()
     True
-    >>> t.sortear()
+    >>> t()
     3
     >>> t.carregada()
     False
